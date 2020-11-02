@@ -15,7 +15,7 @@ This repo contains instructions for a hackathon and workshop activity for studen
 
 ## Hackathon Instructions
 
-If you're using this material for a hackathon, go [to the hackathon page](hackathon.md).
+If you're using this material for a hackathon, go to the [to the hackathon page](hackathon.md).
 
 ## Workshop Instructions
 
