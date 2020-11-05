@@ -19,7 +19,7 @@ If you're using this material for a hackathon, go to the [to the hackathon page]
 
 ## Workshop Instructions
 
-Participating in a workshop? go [workshop page](workshop.md).
+Participating in a workshop? go to the [workshop page](workshop.md).
 
 [Folks who have contributed to this repo](CONTRIBUTING.md)
 
