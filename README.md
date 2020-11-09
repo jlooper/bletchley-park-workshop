@@ -11,7 +11,7 @@ Would you like to try your hand at building games using various methods? In this
 | [Space Game](https://github.com/WebDev-Beginners/6-space-game)            | Pew pew! In this hand-coded space-invaders type game, learn about the Canvas API in JavaScript while creating a space-invaders type game using HTML and CSS. Work through this advanced workshop via our Web Development for Beginners curricuum.           | Advanced     |
 
 
-This repo contains instructions for a hackathon and workshop activity for students who want to build a choose-your-own-adventure text-based game. There are also ['train-the-trainer' instructions](instructor_materials/README.md) for teachers, coaches, and instructors.
+This repo contains instructions for a self-driven or instructor-led workshop activity for students who want to build a choose-your-own-adventure text-based game. There are also ['train-the-trainer' instructions](instructor_materials/README.md) for teachers, coaches, and instructors.
 
 ## Workshop Instructions
 
