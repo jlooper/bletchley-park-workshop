@@ -13,14 +13,8 @@ Would you like to try your hand at building games using various methods? In this
 
 This repo contains instructions for a hackathon and workshop activity for students who want to build a choose-your-own-adventure text-based game. There are also ['train-the-trainer' instructions](instructor_materials/README.md) for teachers, coaches, and instructors.
 
-## Hackathon Instructions
-
-If you're using this material for a hackathon, go to the [to the hackathon page](hackathon.md).
-
 ## Workshop Instructions
 
-Participating in a workshop? go to the [workshop page](workshop.md).
-
-[Folks who have contributed to this repo](CONTRIBUTING.md)
+Participating in a workshop? go to the [workshop page](workshop.md) and follow the instructions.
 
 [Code of Conduct](CODE_OF_CONDUCT.md)
