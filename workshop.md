@@ -52,7 +52,8 @@ You can override styles or add new ones in the `app/game/.vuepress/components/th
 
 > It's amazing how a new font can change the entire feel of your game. If you like, create a folder in the `/game/.vuepress/public` folder called `fonts` and install a font. You can download free ones in .ttf format (TrueType Fonts) at [fontsquirrel](https://www.fontsquirrel.com). To make fonts show, edit the font .src:
 
-```src: local('your-font-name'), url(/fonts/your-font-file-name.ttf) format('ttf');
+```
+src: local('your-font-name'), url(/fonts/your-font-file-name.ttf) format('ttf');
 ```
 
 While your game is running, edit the `index.styl` file to make the colors look like your game theme. The top area has backdrops, so look for interesting free-to-use images from [Unsplash](https://unsplash.com) or other Creative Commons imagery to use to give an atmosphere to the game. These images go into `public/images` and you can change backdrops in the numbered markdown files like `1.md`.
@@ -94,13 +95,7 @@ In your markdown file, the player sometimes needs to pick up an inventory item. 
 	
 		
 	},	
-	{
-		"id": 2,
-		"instructions": "instruction 2",
-		"name": "name 2",
-		"gameItem": "game item 2",
-		"initialHide": true
-	}
+	...
 ]
 ```
 📌 Task: Practice adding a piece to be picked up by adding a comma to the previous element, and creating a new object:
@@ -110,14 +105,14 @@ In your markdown file, the player sometimes needs to pick up an inventory item. 
 		"id": 3,//match the id
 		"instructions": "Pick up the",//written instructions
 		"name": "jewel",//clickable word
-		"initialHide": true,//don't show this item until a condition is met
+		"initialHide": true,//initially hide results
 		"result": "The jewel suddenly burns red hot!"//what happens when you collect the item
 	}
 ```
 
 ### Enhanced Pages
 
-To add a page that depends on a condition being met, use syntax like this: `<Page url="2" instructions="" action="Fly West" condition="1" />` - here, you send your adventurer to page 2 (`2.md`), with optional instructions. The page link will hint where you're going, and the page link won't show until a condition is met (in this case, you have to pick up the key with item.id 1 to see the link). Experiment with the engine to customize your user's journey. 
+To make the user's experience more interesting, add a link that only becomes available when a user meets a given condition. To do this, edi the Page markup: `<Page url="2" instructions="" action="Fly West" condition="1" />`. Here, you send your adventurer to page 2 (`2.md`), with optional instructions. The page link will hint where you're going, and the page link won't show until a condition is met (in this case, you have to pick up the key with item.id 1 to see the link - try this with several items to see how you can guide your user's journey). Experiment with the engine to customize your user's journey.
 
 > Advanced: If you want to make changes to the logic of the relationship between inventory and page, edit the `app/game/.vuepress/game/Page.vue` file. You can see how certain elements appear and disappear based on the way the page links are formatted.
 
