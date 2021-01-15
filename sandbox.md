@@ -1,28 +1,30 @@
-## Setting up Code Sandbox with a template
+## Setting up Code Sandbox
 
-Here are the steps you can follow to get started with the static game engine in Code Sandbox. You can use a template to avoid local installation.
+Here are the steps you can follow to get started with the static game engine in Code Sandbox. You can use imported code from GitHub to avoid a local installation.
 
-1. Navigate to [Code Sandbox](https://codesandbox.io). The home page looks like this
+1. Navigate to [GitHub](https://www.github.com) and create an account or sign in to your account.
+
+![GitHub Home](./images/gh.png)
+
+2. Navigate to [Code Sandbox](https://codesandbox.io). The home page looks like this:
 
 ![Code Sandbox Home](./images/1.png)
 
-2. Sign in at the top, using your GitHub login. If you don't have a GitHub login, create one on [GitHub.com](https://github.com) and use those credentials to login to Code Sandbox.
+3. Sign in at the top of Code Sandbox, using your GitHub login.
 
 ![Sign in](./images/2.png)
 
-Click the 'create a Sandbox' button; a popup opens.
+4. Click the 'create a Sandbox' button; a popup opens.
 
-![Sign in](./images/3.png)
+![Create](./images/3.png)
 
-Create your sandbox by searching 'template universe' for 'static-game-engine'. 
+5. Click 'import sandbox' in this popup. Create a new Sandbox by pasting this URL in the box below:
 
-![Sign in](./images/4.png)
+> `https://github.com/jlooper/static-game-engine/tree/main/app`
 
-There are two templates available; use the one with the VuePress logo. Choose this template and your site is scaffolded (setup in Code Sandbox's environment).
+![Import](./images/import.png)
 
-![Sign in](./images/5.png)
-
-Your scaffolded project looks like this:
+6. Click 'import and fork'. Your new sandbox imports the code, builds the project, and your scaffolded project looks like this:
 
 ![Final project](./images/6.png)
 
