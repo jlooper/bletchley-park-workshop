@@ -158,11 +158,11 @@ You can create a _linear_ game by creating a sequence of markdown pages in the `
 The basic way to build this game is to follow these steps in order. Imagine you're writing a story about a castle.
 
 1. **Add markdown pages**, for every markdown page you add, this is a room in the castle that the player of the game might be able to visit if you provide a door to it (a link can be thought of as a door).
-1. **Write a storyline**, At this point, you want to add a description of your room, what it looks like, and what the player experiences. An example description could be a text like this:
+2. **Write a storyline**, At this point, you want to add a description of your room, what it looks like, and what the player experiences. An example description could be a text like this:
 
-   ```markdown
-	 You're inside the room of the old castle. There's a suite of armour to your left and a stand on your right side with three swords placed on it. There's a table in front of you. On the table, there's a [scroll](scroll.md)
-	 ```
+```markdown
+You're inside the room of the old castle. There's a suite of armour to your left and a stand on your right side with three swords placed on it. There's a table in front of you. On the table, there's a [scroll](scroll.md)
+```
 
 2. **Add door and items**. Design your room by including markup instructions to provide links that will serve as doors, and other types of links that will represent items that you can pick up.
 
@@ -174,11 +174,11 @@ The basic way to build this game is to follow these steps in order. Imagine you'
 
 3. Take a look at the file `game/README.md`. This is the home page of your game. Notice this code:
 
-   ```html
-   <Page url="1" instructions="" action="Press the button" condition="none" />
-   ```
+```html  
+<Page url="1" instructions="" action="Press the button" condition="none" />
+```
 
-   This code defines a door or moment that leads from your current moment to the next. When this link is clicked, the player moves to the next task, area, or moment. 
+This code defines a door or moment that leads from your current moment to the next. When this link is clicked, the player moves to the next task, area, or moment. 
 
    - Look at the part that says **url="1"**, the game engine will translate this to mean `1.md`. That's where the player ends up if they click the link. 
    - Now look at **action="Press the button"**, the value **Press the button** is what the player will see as an underlined text.
@@ -186,44 +186,44 @@ The basic way to build this game is to follow these steps in order. Imagine you'
 
 > ❗️ This next section should be done if you are working locally 
 
-📌 Task: Create a new room, the engine room
+📌 Optional Task: Create a new room, the engine room
 
 1. Create a new page called `3.md` next to the other numbered pages. Give the file the following content:
 
 ```markdown
-   ---
-	backdrop: images/controls.png
-	---
+---
+backdrop: images/controls.png
+---
 
-	# Engine Room
+# Engine Room
  
-	 This is the engine room of the spaceship. There's a huge reactor in the middle of the room. There are engineers positioned in various parts of the room looking at different instruments to make sure the engine works as it should.
+This is the engine room of the spaceship. There's a huge reactor in the middle of the room. There are engineers positioned in various parts of the room looking at different instruments to make sure the engine works as it should.
 ```
 
-1. Open the file `1.md` and add the following content at the bottom of the file:
+2. Open the file `1.md` and add the following content at the bottom of the file:
+
+```html
+<Page url="3" instructions="" action="Go to engine room" condition="none" />
+```
+
+Your game should recompile and you can see the new room.
+
+3. Click the link **Go to room**:
+
+You should now be taken to the Engine room. You should see the following text that you typed earlier:
 
 ```markdown
-	 <Page url="3" instructions="" action="Go to engine room" condition="none" />
-```
-
-1. Run the game by pressing the play button. You should now see a link that says **Go to room** at the bottom of the page.
-
-1. Click the link **Go to room**:
-
-   You should now be taken to the Engine room. You should see the following text that you typed earlier:
-
-```markdown
-	---
-	backdrop: images/controls.png
-	---
-   # Engine room
+---
+backdrop: images/controls.png
+---
+# Engine room
  
-	 This is the engine room of the spaceship. There's a huge reactor in the middle of the room. There are engineers positioned in various parts of the room looking at different instruments to make sure the engine works as it should.
+This is the engine room of the spaceship. There's a huge reactor in the middle of the room. There are engineers positioned in various parts of the room looking at different instruments to make sure the engine works as it should.
 ```
 
-   Congratulations, you've just done the following things:
+Congratulations, you've just done the following things:
 
-   - Added a new room, _3.md_ plus a description of the room
+   - Added a new room, `3.md` plus a description of the room
    - Added a navigation link to another room
    - Ensured your game worked by saving all the changes and tried clicking a link you added
 
@@ -239,7 +239,6 @@ Take a look at the file called `1.md`. You see some code:
 <Item id="2" />
 
 <Page url="2" instructions="" action="Fly West" condition="1" />
-
 ```
 
 The first two links are **items**, you can see that as the element is called `<Item>`. When clicked these item will end up in your inventory.
@@ -256,7 +255,7 @@ To create an item you need to do two things:
 
 - **Add a description of the item**. To do this locate the file called `app/game/.vuepress/theme/utils/items.json`. This is where all items are defined that are used in the game. If you open up this file, you will see content similar to this text:
 
-   ```json
+```json
    [
     	{
     		"id": 1,
@@ -268,30 +267,29 @@ To create an item you need to do two things:
     		
     	},	
     	...
-  ]
-  ```
+]
+```
 
-  What you are seeing above is how an item is defined. It has a few fields that need to be filled in:
+What you are seeing above is how an item is defined. It has a few fields that need to be filled in:
 
-     - **id**, this field needs to be a number and it needs to be unique, no other items in this file may have the same number
-     - **instructions**, this text is rendered so the player of the game sees it
-     - **result**, this text is shown once the player clicks the item link and the item is added to your inventory.
+  - **id**, this field needs to be a number and it needs to be unique, no other items in this file may have the same number
+  - **instructions**, this text is rendered so the player of the game sees it
+  - **result**, this text is shown once the player clicks the item link and the item is added to your inventory.
+  - **placing the item in a room**. Look at the file `1.md` and scroll to the bottom of the file to find these elements:
 
-- **placing the item in a room**. Look at the file `1.md` and scroll to the bottom of the file to find these elements:
-
-```markdown
+```html
    <Item id="1" />
 
    <Item id="2" />
 ```
 
-   you can see that this room has two items **1** and **2** that the player can pick up, if they want.
+You can see that this room has two items **1** and **2** that the player can pick up, if they want.
 
 📌 Task: Add a new item to the game:
 
 1. Locate the file _app/game/.vuepress/theme/utils/items.json_. Ensure the content of the file looks like so:
 
-   ```json
+```json
 	 [
     	{
     		"id": 1,
@@ -314,12 +312,12 @@ To create an item you need to do two things:
     		"initialHide": true,
     		"result": "The jewel suddenly burns red hot!"
     	}
-    ]
-	 ```
+]
+```
 
-   What you've done is to add this piece of JSON to the file:
+What you've done is to add this piece of JSON to the file:
 
-   ```json
+```json
 	 {
     		"id": 3,//match the id
     		"instructions": "Pick up the",//written instructions
@@ -327,45 +325,44 @@ To create an item you need to do two things:
     		"initialHide": true,//initially hide results
     		"result": "The jewel suddenly burns red hot!"//what happens when you collect the item
 	 }
-	 ```
-
-   The game now is aware of that this item exists. Next let's place the item in a room so the player can pick up this item.
-
-2. Locate the file `1.md`. To the bottom of the file, add the content:
-
-```markdown
-	 <Item id="3" />
 ```
 
-1. Click the link **pick up the jewel**, note how the jewel is added to the inventory on your left side.
+The game now is aware of that this item exists. Next let's place the item in a room so the player can pick up this item.
 
-> ☕️ Let's talk about what kind of items you want to add to your game?
+2. Locate the file `1.md`. At the bottom of the file, add the content:
+
+```html
+<Item id="3" />
+```
+
+3. Click the link **pick up the jewel** and note how the jewel is added to the inventory on your left side in a full-screen browser.
+
+> ☕️ Let's talk about what kind of items you want to add to your game
 ### Enhanced Pages
 
 To make the user's experience more interesting, you can add a link that only becomes available when a user meets a given condition. Let's do this next.
 
 📌 Task: Add a locked door, that can be unlocked by an item:
 
-1. In the file _1.md_ locate the instruction that looks like so:
+1. In the file `1.md` locate the instruction that looks like so:
 
-```markdown
+```html
 	 <Page url="2" instructions="" action="Fly West" />
 ```
 
-   change it to look like so:
+2. Change it to look like so:
 
-```markdown
-	 <Page url="2" instructions="" action="Fly West" condition="2" />
+```html
+<Page url="2" instructions="" action="Fly West" condition="2" />
 ```
 
-   What you've done is to add this part **condition="2"** that means you need to find and pick up an item with ID 2. If you were to refresh the game the link **Fly West** is no longer visible. You've instructed the game to hide this link until the player picks up the correct item.
+What you've done is to add this part **condition="2"** that means you need to find and pick up an item with ID 2. If you were to refresh the game the link **Fly West** is no longer visible. You've instructed the game to hide this link until the player picks up the correct item.
 
-  > 💡 if you want to make the game challenging, you can hide an item in room somewhere so they player needs to explore a bit. Once they pick up the item, they can then return to that first room.
+> 💡 if you want to make the game challenging, you can hide an item in room somewhere so they player needs to explore a bit. Once they pick up the item, they can then return to that first room.
 
-1. Pick up the item by collecting the **meteorite**. When you click this link, the link **Fly West** will become visible.
+3. Pick up the item by collecting the **meteorite**. When you click this link, the link **Fly West** will become visible.
 
-
-> Advanced: If you want to make changes to the logic of the relationship between inventory and page, edit the `app/game/.vuepress/game/Page.vue` file. You can see how certain elements appear and disappear based on the way the page links are formatted.
+> 🏅 Advanced: If you want to make changes to the logic of the relationship between inventory and page, edit the `app/game/.vuepress/game/Page.vue` file. You can see how certain elements appear and disappear based on the way the page links are formatted.
 
 Now, you know how to create a basic page, an element to add to the inventory, and a more complicated page whose link will show IF an element is added to inventory. You have the building blocks of a game!
 ## Deploy the app
