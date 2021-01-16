@@ -190,7 +190,7 @@ The basic way to build this game is to follow these steps in order. Imagine you'
 
 1. Create a new page called `3.md` next to the other numbered pages. Give the file the following content:
 
-   ```markdown
+```markdown
    ---
 	backdrop: images/controls.png
 	---
