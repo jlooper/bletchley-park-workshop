@@ -202,9 +202,9 @@ The basic way to build this game is to follow these steps in order. Imagine you'
 
 1. Open the file `1.md` and add the following content at the bottom of the file:
 
-   ```markdown
+```markdown
 	 <Page url="3" instructions="" action="Go to engine room" condition="none" />
-	 ```
+```
 
 1. Run the game by pressing the play button. You should now see a link that says **Go to room** at the bottom of the page.
 
@@ -212,18 +212,20 @@ The basic way to build this game is to follow these steps in order. Imagine you'
 
    You should now be taken to the Engine room. You should see the following text that you typed earlier:
 
-   ```output
-   Engine room
+```markdown
+	---
+	backdrop: images/controls.png
+	---
+   # Engine room
  
 	 This is the engine room of the spaceship. There's a huge reactor in the middle of the room. There are engineers positioned in various parts of the room looking at different instruments to make sure the engine works as it should.
-   ```
+```
 
    Congratulations, you've just done the following things:
 
    - Added a new room, _3.md_ plus a description of the room
    - Added a navigation link to another room
    - Ensured your game worked by saving all the changes and tried clicking a link you added
-
 
 ### Inventory
 
@@ -246,7 +248,6 @@ The bottom page links are doors to actions the player can take next:
 
 ```markdown
 <Page url="2" instructions="" action="Fly West" condition="1" />
-
 ```
 
 **How to create an item**
@@ -278,11 +279,11 @@ To create an item you need to do two things:
 
 - **placing the item in a room**. Look at the file `1.md` and scroll to the bottom of the file to find these elements:
 
-   ```markdown
-	 <Item id="1" />
+```markdown
+   <Item id="1" />
 
    <Item id="2" />
-	 ```
+```
 
    you can see that this room has two items **1** and **2** that the player can pick up, if they want.
 
@@ -332,9 +333,9 @@ To create an item you need to do two things:
 
 2. Locate the file `1.md`. To the bottom of the file, add the content:
 
-   ```markdown
+```markdown
 	 <Item id="3" />
-	 ```
+```
 
 1. Click the link **pick up the jewel**, note how the jewel is added to the inventory on your left side.
 
@@ -347,15 +348,15 @@ To make the user's experience more interesting, you can add a link that only bec
 
 1. In the file _1.md_ locate the instruction that looks like so:
 
-   ```markdown
+```markdown
 	 <Page url="2" instructions="" action="Fly West" />
-	 ```
+```
 
    change it to look like so:
 
-   ```markdown
+```markdown
 	 <Page url="2" instructions="" action="Fly West" condition="2" />
-	 ```
+```
 
    What you've done is to add this part **condition="2"** that means you need to find and pick up an item with ID 2. If you were to refresh the game the link **Fly West** is no longer visible. You've instructed the game to hide this link until the player picks up the correct item.
 
@@ -376,6 +377,7 @@ If you'd like to deploy this game to the cloud using Azure Static Web Apps, here
 ## Next steps
 
 To truly customize your game, get it running on your local computer so you can add new files and images more easily. You can always make a game more complex! How can you add more interest, or a more winding storyline, to your game?
+
 ## Feedback
 
 If you have feedback on this workshop, open a GitHub issue on this repo to let us know.
