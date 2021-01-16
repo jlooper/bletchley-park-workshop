@@ -14,11 +14,11 @@ Here are the steps you can follow to get started with the static game engine in 
 
 ![Sign in](./images/2.png)
 
-4. Click the 'create a Sandbox' button; a popup opens.
+4. Click the 'create a sandbox' button; a popup opens.
 
 ![Create](./images/3.png)
 
-5. Click 'import sandbox' in this popup. Create a new Sandbox by pasting this URL in the box below:
+5. Click 'import sandbox' in this popup. Create a new sandbox by pasting this URL in the box below:
 
 > `https://github.com/jlooper/static-game-engine/tree/main/app`
 
