@@ -44,6 +44,7 @@ So, you want to make a game! Think about what kind of game you'd like to build. 
 Since this is a 'choose-your-own-adventure' type game, you can also have several paths to offer your player. What paths can you send your player down, and are some of those dead ends?
 
 > ☕️ Take a minute to tell or write down your idea
+
 ## Your Project Files
 
 Here's an overview of the files in your project:
@@ -77,6 +78,7 @@ What you see is a rendered version of the file `README.md`, the game's home page
 > 💡 Spend a few minutes going through the codebase and see how it functions.
 
 📌 Optional Task: You can see your game outside of Code Sandbox, as well! In the game panel, click the link at the top right (when you hover over it, it says 'open in new window'). You will see the game in a full browser, with the inventory panel viewable on the left.
+
 ### Your app's packages: `package.json`
 
 In the `game` folder, you find a list of the packages that make up the web app listed in the `package.json` file. 
@@ -107,6 +109,7 @@ You can override Tailwind styles or add new ones in the `game/.vuepress/componen
 📌 Optional Task: Install and use a new font
  
 1. **Create a folder** in the `/game/.vuepress/public` directory called **fonts** by hovering over the `public` folder in the files panel and clicking the folder icon. 
+
 2. **Download a font**. You can download free ones in .ttf format (TrueType Fonts) at [fontsquirrel](https://www.fontsquirrel.com).
 
 3. **Use font**. To make fonts show, edit the font .src:
@@ -147,6 +150,7 @@ As part of giving your game a nice look, you can change some of the images. Righ
 
 > ❗️ Code Sandbox sometimes has trouble with external files, so to really configure your game with new images, we recommend installing it locally on your computer and not using 
 Code Sandbox
+
 ## Design the game
 
 Now that you have the game running and styled, you can start designing the steps of the game.
@@ -161,7 +165,7 @@ The basic way to build this game is to follow these steps in order. Imagine you'
 2. **Write a storyline**, At this point, you want to add a description of your room, what it looks like, and what the player experiences. An example description could be a text like this:
 
 ```markdown
-You're inside the room of the old castle. There's a suite of armour to your left and a stand on your right side with three swords placed on it. There's a table in front of you. On the table, there's a [scroll](scroll.md)
+You're inside the room of the old castle. There's a suite of armour to your left and a stand on your right side with three swords placed on it. There's a table in front of you. On the table, there's a Scroll <Item id=11>
 ```
 
 2. **Add door and items**. Design your room by including markup instructions to provide links that will serve as doors, and other types of links that will represent items that you can pick up.
@@ -216,6 +220,7 @@ You should now be taken to the Engine room. You should see the following text th
 ---
 backdrop: images/controls.png
 ---
+
 # Engine room
  
 This is the engine room of the spaceship. There's a huge reactor in the middle of the room. There are engineers positioned in various parts of the room looking at different instruments to make sure the engine works as it should.
@@ -319,11 +324,11 @@ What you've done is to add this piece of JSON to the file:
 
 ```json
 	 {
-    		"id": 3,//match the id
-    		"instructions": "Pick up the",//written instructions
-    		"name": "jewel",//clickable word
-    		"initialHide": true,//initially hide results
-    		"result": "The jewel suddenly burns red hot!"//what happens when you collect the item
+    		"id": 3
+    		"instructions": "Pick up the",
+    		"name": "jewel",
+    		"initialHide": true,
+    		"result": "The jewel suddenly burns red hot!"
 	 }
 ```
 
@@ -337,7 +342,8 @@ The game now is aware of that this item exists. Next let's place the item in a r
 
 3. Click the link **pick up the jewel** and note how the jewel is added to the inventory on your left side in a full-screen browser.
 
-> ☕️ Let's talk about what kind of items you want to add to your game
+> ☕️ If you want, let's talk about what kind of items you want to add to your game, we're here if you need us.
+
 ### Enhanced Pages
 
 To make the user's experience more interesting, you can add a link that only becomes available when a user meets a given condition. Let's do this next.
@@ -365,6 +371,7 @@ What you've done is to add this part **condition="2"** that means you need to fi
 > 🏅 Advanced: If you want to make changes to the logic of the relationship between inventory and page, edit the `app/game/.vuepress/game/Page.vue` file. You can see how certain elements appear and disappear based on the way the page links are formatted.
 
 Now, you know how to create a basic page, an element to add to the inventory, and a more complicated page whose link will show IF an element is added to inventory. You have the building blocks of a game!
+
 ## Deploy the app
 
 If you'd like to deploy this game to the cloud using Azure Static Web Apps, here's a button to help you do that: 
