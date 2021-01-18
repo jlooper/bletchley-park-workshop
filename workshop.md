@@ -165,7 +165,7 @@ The basic way to build this game is to follow these steps in order. Imagine you'
 2. **Write a storyline**, At this point, you want to add a description of your room, what it looks like, and what the player experiences. An example description could be a text like this:
 
 ```markdown
-You're inside the room of the old castle. There's a suite of armour to your left and a stand on your right side with three swords placed on it. There's a table in front of you. On the table, there's a Scroll <Item id=11>
+You're inside the room of the old castle. There's a suit of armour to your left and a stand on your right side with three swords placed on it. There's a table in front of you. On the table, there's a Scroll <Item id=11>
 ```
 
 2. **Add door and items**. Design your room by including markup instructions to provide links that will serve as doors, and other types of links that will represent items that you can pick up.
