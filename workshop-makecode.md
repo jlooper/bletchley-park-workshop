@@ -1,5 +1,12 @@
 # Workshop Instructions
 
+| **Tutorials**              | Overview of tutorials                             |
+| ----------------------------- | ------------------------------------------------------------------------------------------------- |
+| **First tutorial on MakeCode**       | **You're here**       |
+| **Second tutorial on MakeCode, gravity** | [MakeCode Gravity tutorial](./workshop-makecode-gravity.md)  |
+
+## First tutorial on MakeCode
+
 In this workshop, we will learn how to build a game using MakeCode arcade. MakeCode arcade is a platform where you can use code or blocks to build games
 
 | **Project Goal**        | build a game that you can share with friends                     |
