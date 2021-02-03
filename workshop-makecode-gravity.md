@@ -23,11 +23,11 @@ In this workshop, we will learn how to build a game using MakeCode arcade. You w
 
 1. In the textbox type a name for your game, you decide what to name it, but you can type **Gravity game** for example.
 
-   Here what the dialog box looks like ![New game dialog](new-game.png)
+   Here what the dialog box looks like ![New game dialog](images/new-game.png)
 
 1. Select **create**.
 
-   Once you've selected the green button, you will see the editor, where you will build your game. ![View of editor](editor.png)
+   Once you've selected the green button, you will see the editor, where you will build your game. ![View of editor](images/editor.png)
 
 ## Creating the game
 
@@ -54,7 +54,7 @@ Here's a picture of what the finished result looks like:
 
 1. Select the same block as you did creating the player.
 
-   ![Create block](create.png)
+   ![Create block](images/create.png)
 
    Don't worry, it should be the same block, you're going to adjust it slightly.
 
@@ -70,7 +70,7 @@ Next you will change the appearance of the log sprite.
 
 1. Select the grey sprite area:
 
-   ![Select sprite](connect-block-sprite.png)
+   ![Select sprite](images/connect-block-sprite.png)
 
     Like before, this will bring up a window where you can select a sprite. This time however, you will select a tree log.
 
@@ -84,11 +84,11 @@ Next you will change the appearance of the log sprite.
 
 1. This time, select a block that looks like so:
 
-   ![Set sprite position to](sprite-position.png)
+   ![Set sprite position to](images/sprite-position.png)
 
    1. Select the input text area for the **X**. It should bring up a menu that looks like so:
 
-      ![Position slider](sprite-position-slider.png)
+      ![Position slider](images/sprite-position-slider.png)
 
       Ensure the slider is all the way to the left and has the value **50**.
 
@@ -117,17 +117,17 @@ The player is a character that you will end up controlling. A player can look li
 1. Select the **sprites menu**
 1. Select a block that looks like the following:
 
-   ![Create block](create.png)
+   ![Create block](images/create.png)
 
 1. Drag the selected block into the right area and within the green block so it connects, like so:
 
-   ![Connect blocks](connect-blocks.png)
+   ![Connect blocks](images/connect-blocks.png)
 
 1. Select the left drop down menu and select the option **Rename variable**, give it the value **hero**.
 
 1. With your mouse, select the sprite area, like so:
 
-   ![Select sprite](connect-block-sprite.png)
+   ![Select sprite](images/connect-block-sprite.png)
 
    This will bring up the following window:
 
@@ -144,11 +144,11 @@ The player is a character that you will end up controlling. A player can look li
 
 1. This time, select a block that looks like so:
 
-   ![Set sprite position to](sprite-position.png)
+   ![Set sprite position to](images/sprite-position.png)
 
    1. Select the input text area for the **X**. It should bring up a menu that looks like so:
 
-      ![Position slider](sprite-position-slider.png)
+      ![Position slider](images/sprite-position-slider.png)
 
       Ensure the slider is all the way to the left and has the value **100**.
 
@@ -170,13 +170,13 @@ Next, you will learn to controlling the hero, to move it across the screen.
 
 1. Select the block that looks like so:
 
-   ![move block](move-block.png)
+   ![move block](images/move-block.png)
 
 1. Drag this block and place it so it connects with the green block.
 
 1. Ensure the **vx** and **vy** values both are set to **100**, like so:
 
-   ![Set vx and vy value](move-vx.png)
+   ![Set vx and vy value](images/move-vx.png)
 
    What this instruction does is to tell the game how much the player should move in pixels.
 
