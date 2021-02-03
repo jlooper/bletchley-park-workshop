@@ -195,7 +195,7 @@ For gravity to be meaningful addition in a game, you need a _falling_ object to 
 
    Ensure **hero** is selected in the first dropdown to the left.
 
-   Select input for **VY** and enter **20**. Now the hero will fall with certain velocity. Next you need to implement logic that ensures the hero doesn't fall forever.
+   Select input for `VY` and enter **20**, enter **0** for `VX`. Now the hero will fall with certain velocity. Next you need to implement logic that ensures the hero doesn't fall forever.
 
 ## Add game logic
 
