@@ -35,18 +35,18 @@ So what are you building? You're building a game where you control a character. 
 
 Here's a picture of what the finished result looks like:
 
-![Gravity game UI](./gravity.png)
+![Gravity game UI](images/gravity.png)
 
 ## Create a world
 
 1. Select scene
 1. Select a block that looks like so
 
-   ![Background image block](./gravity-bg.png)
+   ![Background image block](images/gravity-bg.png)
 
 1. Select the grey sprite area, and select a background like so:
 
-   ![Select background image](gravity-select-bg.png)
+   ![Select background image](images/gravity-select-bg.png)
 
 1. Select the green **Done** button in the bottom right.
 
@@ -76,7 +76,7 @@ Next you will change the appearance of the log sprite.
 
 1. Select the log in the bottom middle part of the gallery like so:
 
-   ![Select tree log image](gravity-obstacle.png)
+   ![Select tree log image](images/gravity-obstacle.png)
 
 ## Position log obstacle
 
@@ -108,7 +108,7 @@ Now create a new obstacle like the one you created above.
 
 Ensure you name it **trunk2** and that the position is **100** and **120** for y. Look at your viewer on the left. It should now look like so:
 
-   ![Game view, two trunks](./gravity-obstacles.png)
+   ![Game view, two trunks](images/gravity-obstacles.png)
 
 ## Create a player
 
@@ -134,7 +134,7 @@ The player is a character that you will end up controlling. A player can look li
    1. Select the **Gallery** option on top.
    1. Next, select the image that looks like a a hero with a sword in the bottom left.
 
-   ![Select sprite from window](gravity-hero.png)
+   ![Select sprite from window](images/gravity-hero.png)
 
    1. Select the green **Done** button in the bottom right.
 
@@ -191,7 +191,7 @@ For gravity to be meaningful addition in a game, you need a _falling_ object to 
 
 1. Select the **Sprites** menu and select a block that looks like so:
 
-   ![Select velocity block](./gravity-velocity.png)
+   ![Select velocity block](images/gravity-velocity.png)
 
    Ensure **hero** is selected in the first dropdown to the left.
 
@@ -209,13 +209,13 @@ There are rules you are about to implement:
 
 1. Select **Sprites** and select a block that looks like so, and place it in the free space (not in the green block):
 
-   ![Block, hero collision with log](./gravity-collision.png)
+   ![Block, hero collision with log](images/gravity-collision.png)
 
    Ensure the first dropdown says **Player** and the right most dropdown says **Obstacle**.
 
 1. Select **Sprites** and select a block that looks like so, and place it within the collision block:
 
-   ![Block, set velocity](./gravity-set-collision.png)
+   ![Block, set velocity](images/gravity-set-collision.png)
 
    Ensure the dropdown says **hero** and that `vx` and `vy` says **0**, as you are essentially saying _if hero collides with a log then hero should stop falling_.
 
@@ -225,43 +225,43 @@ You need logic that says, if the hero is no longer on the log and their speed is
 
 1. Select **Game** and the block that looks like so, and place it in anywhere in the free space:
 
-   ![Block, on game update](./gravity-game-update.png)
+   ![Block, on game update](images/gravity-game-update.png)
 
 1. Select **Logic** and block that looks like so, and place it in the _on game update_ block.
 
-   ![Block, if-else](./gravity-if-else.png)
+   ![Block, if-else](images/gravity-if-else.png)
 
    This block will allow you to express so called _flow logic_, what should happen given a certain condition.
 
 1. Select **Logic** and select a _comparison block_ and drop it in the IF area of the IF-ELSE block:
 
-   ![Block, comparison](./gravity-comparison.png)
+   ![Block, comparison](images/gravity-comparison.png)
 
    After having dropped the block, it should look like so:
 
-   ![Block, comparison in IF block](./gravity-comparison-if.png)
+   ![Block, comparison in IF block](images/gravity-comparison-if.png)
 
    Ensure drop down is showing **>=**, ie. larger than.
 
 1. Select **Sprites** and select this block.
 
-   ![Block, compare to this object and field](./gravity-compare-object.png)
+   ![Block, compare to this object and field](images/gravity-compare-object.png)
 
    Now place that block inside the left input, inside of the comparison block like so:
 
-   ![Block, compare hero y](gravity-comparison-final.png)
+   ![Block, compare hero y](images/gravity-comparison-final.png)
 
    Set the remaining input field to 120, that's the max height of the screen, i.e we are saying _if your hero has hit the ground, do something_.
 
 1. Select **Sprites** and select this block and place it within the body of the IF statement:
 
-   ![Block, set property](./gravity-set-property.png)
+   ![Block, set property](images/gravity-set-property.png)
 
    Ensure the first dropdown says **hero** and the second one says **vy (velocity y)** and the right most input should say **0**. You're now stating _hero should stop falling when it hits the ground_.
 
 1. Select **Sprites** and a block looking like so and place it right after the previous block:
 
-   ![Block say](./gravity-say.png) 
+   ![Block say](images/gravity-say.png) 
 
    Change the first dropdown to **hero** and type **ouch** in the input field. Your hero will now say "ouch" when it hits the ground. Select the **+** and in the _for_ field input **1000**. That means the "ouch" is visible for a second. Next, you will destroy the hero after 1 second. You will have to do that in code 
 
@@ -304,7 +304,7 @@ You need logic that says, if the hero is no longer on the log and their speed is
 
 1. Select a block looking like so and drop it in the ELSE part:
 
-   ![Block, set velocity](./gravity-set-collision.png)
+   ![Block, set velocity](images/gravity-set-collision.png)
 
    Ensure the dropdown says **hero** and that `vx` says **0** and `vy` says **20**, as you are essentially saying _set velocity back to 20.
 
@@ -316,14 +316,14 @@ A follow camera means that one of your sprites will be followed at all times. Th
 
 1. Select **Scene** and block looking like so and drop it in the green **on start** block:
 
-   ![Block, follow camera](./gravity-camera.png)
+   ![Block, follow camera](images/gravity-camera.png)
 
    Ensure the first drop down says **hero**. That's it, that is your entire game.
 
 A demo of a running game looks like this:
 
-![Video of running game](./workshop-gravity.gif)  
+![Video of running game](images/workshop-gravity.gif)  
 
 Here's the full code in blocks:
 
-![The full solution](./gravity-full-code.png)   
+![The full solution](images/gravity-full-code.png)   
